@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">   
+
+    <title>Flight Planner</title>
+</head>
+<body>
+    <header class="level">
+        <h1 class="title is-1 level-item has-text-centered">Ace Flight Planner</h1>
+    </header>
+
+    <section class="hero is-medium is-success level">
+        <div class="level-item has-text-centered">
+            <h2 class="title is-2">Allows us to help guide you on your journey to unknown places...</h2>
+
+        </div>
+    </section>
+
+    <section class="tile is-ancestor is-vertical">
+
+        <div class="tile is-parent notification is-primary is-fullhd level-item .img-responsive img2">
+            <h2" class="title is-2 has-text-success">Flight Rates</h2>
+            <!--flight planner here-->
+            <div class="flight control">
+                <input type="text" placeholder="search airports by city,region or country" id="searchairports" class="input">
+                <button id="searchairportsbtn" class="button  btn is-link">Search airports</button>
+                <button id="searchedairbtn" class="button  btn is-link">View searched airports</button>
+                <button id="deletehistorybtn" class="button  btn is-link">Delete search history</button>
+                <ol id="airportsearchresults"></ol>
+                <ul id="searchhistory"></ul>
+                <div id="noresult" class="moda">
+                    <div class="moda-content">
+                        <span class="close">&times;</span>
+                        <p>Try another search</p>
+                    </div>
+                </div>
+                <!-- <p id="noresult">Try another search</p> -->
+            </div>
+            <div class = "flight control">
+                <input type="text" placeholder="from airport code" id="from-flight" class="input" >
+                <input type="text" placeholder="departing yyyy-mm-dd" id="from-date" class="input">
+            </div>
+            <div class = "flight control">
+                <input type="text" placeholder="to airport code" id="to-flight" class="input" >
+                <input type="text" placeholder="returning yyyy-mm-dd (optional)" id="return-date" class="input">
+            </div>
+            <button id="flight-quotes" class="button btn is-link">Get flight quotes</button>
+            <ul id="resuling-flight"></ul>
+            <ul id="countrycurrency"></ul>
+            <div id="errormodal" class="moda">
+                <div class="moda-content">
+                    <span class="close" id="x">&times;</span>
+                    <p>No results found. Try another airport, date or try again later.</p>
+                </div>
+            </div>
+            <!-- <p id="errormodal">No results found. Try another airport, date or try again later.</p> -->
+        </div>
+        <div class="tile is-parent notification is-warning is-fullhd level-item .img-responsive img1 control" id="currency">
+            <h3" class="title is-2 has-text-warning">Currency Exchange Rates</h3>
+            <input type="number" id="amount" placeholder="Enter amount" class="input">
+            <div class="from-currency">
+                <p class="subtitle is-4">From</p>
+                <select name="currency" class="currency-choices"> 
+                    <!-- <option value="" disabled selected>Select a currency</option> -->
+                </select>
+            </div>
+            <div class="to-currency">
+                <p class="subtitle is-4">To</p>
+                <select name="currency" class="currency-choices">
+                    <!-- <option value="">To currency</option> -->
+                </select>
+            </div>
+            <div >
+                <div id="result" class="moda">
+                    <div class="moda-content">
+                        <span class="close" id="y">&times;</span>
+                        <p>result here</p>
+                        <!-- <p class="subtitle is-4 has-text-danger-dark">result here</p> -->
+                    </div>
+                </div>
+                <!-- <p id="result" class="subtitle is-4 has-text-danger-dark">result here</p> -->
+                <button id="currency-exchange" class="button btn is-link">Get exchange rate</button>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="./assets/js/countries.js"></script>
+    <script src="./assets/js/countries00.js"></script>
+    <script src="./assets/js/script.js"></script>   
+</body>
+
+</html>
